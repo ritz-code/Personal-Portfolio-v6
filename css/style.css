@@ -1,0 +1,184 @@
+@import "./_variables";
+
+html {
+    overflow-x: hidden; }
+  
+  body {
+    line-height: 1.8;
+    font-size: 16px;
+    background: var(--background-color);
+    color: var(--font-color); 
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  
+  }
+  
+  a {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+ }
+    a:hover {
+      text-decoration: none;
+}
+  
+  h1, h2, h3, h4, h5,
+  .h1, .h2, .h3, .h4, .h5 {
+    line-height: 1.45;
+    font-weight: normal;
+    color: var(--font-color); }
+  
+  h1, h2, h3 {
+    letter-spacing: 0!important; }
+
+    h1, h2,h3,h4,h5 {
+    line-height: 1.2;
+    color: var(--title-lt-heading);}
+
+  h3,h4,h5,p {
+    letter-spacing: 0.04rem;
+  }
+
+  h1 {
+    color: var(--lt-color-heading);
+    font-size: var(--font-heading);
+    margin-top: var(--l-margin);
+    font-weight: 500;
+    text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5,
+      -2px 3px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5,
+      -4px 5px #808d93, -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5,
+  }
+
+  .text-primary {
+    color: #4586FF !important; } 
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 60px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  hyphens: auto;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.65;
+}
+
+p {
+  color: var(--lt-color-heading);
+  max-width: 98%;
+  line-height: 1.6rem !important;
+  font-size: var(--s-font) !important;
+  margin-bottom: var(--xxs-margin) !important;
+}
+
+li {
+  color: var(--lt-color-heading);
+  line-height: 2rem !important;
+  font-size: var(--xs-font) !important;
+  list-style-type: none;
+}
+
+
+h2 {
+  
+ color: var(--title-lt-heading);
+  font-size: var(--font-subheading);
+  font-weight: 700;
+  margin-top: var(--l-margin);
+  letter-spacing: 2.5px;
+  margin-bottom: var(--xs-margin);
+  text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5;
+}
+
+h3 {
+  color: var(--title-lt-heading);
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: var(--xxs-margin);
+}
+
+h4 {
+  font-size: var(--s-font);
+  font-weight: 600;
+}
+h5 {
+  font-size: var(--xs-font);
+  font-weight: 500;
+  color: var(--font-color-lt);
+}
+
+h8 {
+  font-size: 0.7rem;
+}
+
+hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 80%;
+  background-color: var(--light-slate);
+  height: 1px;
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 100px;
+    margin-top: var(--m-margin);
+    color: #1a1b1e;
+  }
+  h2 {
+    font-size: 8vmin;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+  p {
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+  }
+}
+
+.sectionWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: var(--xl);
+}
+
+
+
+.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  border: 1px solid var(--font-color-dark);
+  
+  padding: var(--xs-padding);
+  text-decoration: none;
+  color: var(--font-color-dark);
+  font-size: 0.65rem;
+  font-weight: 500;
+  border-radius: var(--xs-border-radius);
+}
+
+
