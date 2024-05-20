@@ -21,60 +21,18 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
-
-
-//Email JS integration
-/* document.getElementById('contactSubmit').addEventListener('submit', function(e) {
-    e.preventDefault();
-	  emailjs.sendForm(service_320r477, template_5fmmusv, e.target, Vu_F4zdaki0EEjCXu)
-	  .then((result) => {
-		console.log(result.text);
-		alert('Message Sent Successfully')
-	  }, (error) => {
-		console.log(error.text);
-		alert('Something went wrong!')
-	  });
-	e.target.reset();
-
-}); */
-
-
-// navigation
-/* var OnePageNav = function() {
-	$(".smoothscroll[href^='#'], #ftco-nav ul li a[href^='#']").on('click', function(e) {
-		e.preventDefault();
-
-		var hash = this.hash,
-				navToggler = $('.navbar-toggler');
-		$('html, body').animate({
-		scrollTop: $(hash).offset().top
-		}, 700, 'easeInOutExpo', function(){
-		window.location.hash = hash;
-		});
-
-
-		if ( navToggler.is(':visible') ) {
-		navToggler.click();
-		}
-	});
-	$('body').on('activate.bs.scrollspy', function () {
-		console.log('nice');
-	})
-};
-OnePageNav();
- */
-
-
 });
 
+
+//EmailJS Integration
 document.getElementById('contactSubmit').onclick = function(e) {
-	console.log("ritu ritu rotu");
+	console.log("ritu ritu rotu: ");
 
 	console.log("ritu e.target.business: "+e.target.business);
 	e.preventDefault();
 	//console.clear();
 
-	emailjs.sendForm("service_320r477", "template_5fmmusv", e.target, "Vu_F4zdaki0EEjCXu")
+	emailjs.sendForm(process.env.SERVICE_ID, process.env.TEMPLATE_ID, e.target, process.env.PUBLIC_KEY)
 	  .then((result) => {
 		console.log(result.text);
 		alert('Message Sent Successfully')
