@@ -38,22 +38,6 @@ function myFunction() {
 
 }); */
 
-const handleOnSubmit = (e) => {
-	console.log("ritu e.target.business: "+e.target.business);
-	//e.preventDefault();
-	//console.clear();
-
-	/* emailjs.sendForm(service_320r477, template_5fmmusv, e.target, Vu_F4zdaki0EEjCXu)
-	  .then((result) => {
-		console.log(result.text);
-		alert('Message Sent Successfully')
-	  }, (error) => {
-		console.log(error.text);
-		alert('Something went wrong!')
-	  });
-	e.target.reset() */
-};
-
 
 // navigation
 /* var OnePageNav = function() {
@@ -82,3 +66,20 @@ OnePageNav();
 
 
 });
+
+const handleOnSubmit = (e) => {
+	console.log("ritu e.target.business: "+e.target.business);
+	//e.preventDefault();
+	//console.clear();
+
+	/* emailjs.sendForm(service_320r477, template_5fmmusv, e.target, Vu_F4zdaki0EEjCXu)
+	  .then((result) => {
+		console.log(result.text);
+		alert('Message Sent Successfully')
+	  }, (error) => {
+		console.log(error.text);
+		alert('Something went wrong!')
+	  });
+	e.target.reset() */
+};
+
