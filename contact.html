@@ -17,6 +17,18 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="scss/style.css">
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "Vu_F4zdaki0EEjCXu",
+            });
+        })();
+    </script>
+
   </head>
 
   <body data-spy="scroll" data-target="#ftco-navbar" data-offset="200">
@@ -80,17 +92,17 @@
 <section id="contactFormContainer">
     <div class="contactWrapper sectionWrapper">
         <div class="formWrapper" id="formWrapper">
-            <form id="contact" method="post" name="form"><input type="hidden" name="form-name" value="form" />
+            <form id="contact" method="post" name="form" ><input type="hidden" name="form-name" value="form" />
                 <h3 class="contactFieldsWrapper"><span>DROP</span> US A LINE</h3>
                 
-                <input aria-label="name" class="contactName" name="name" placeholder="Name" type="text" tabindex="1" required="" />
+                <input aria-label="name" class="contactName" name="contact_name" placeholder="Name" type="text" tabindex="1" required="" />
                 <input aria-label="name" name="business" placeholder="Business" type="text" tabindex="2" required="" />
                 <input aria-label="email" name="email" placeholder="Email Address" type="email" tabindex="3" required="" />
                 <input aria-label="phone number" name="phone" placeholder="Phone Number" type="tel" tabindex="4" required="" />
                 <textarea aria-label="write your message" name="message" placeholder="Type your Message Here.." tabindex="5" required=""></textarea>
                 
                 <p class="formSubmit">
-                    <button name="submit" type="submit" id="contactSubmit" class="button submitBtn" data-submit="...Sending">Submit</button>
+                    <button name="submit" type="submit" id="contactSubmit" onclick="handleOnSubmit()" class="button submitBtn" data-submit="...Sending">Submit</button>
                 </p>
             </form>
         </div>
@@ -112,6 +124,7 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+ 
 <script src="js/main.js"></script>
 </body>
 

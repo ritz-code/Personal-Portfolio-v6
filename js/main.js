@@ -1,6 +1,6 @@
-require("dotenv").config();
 
-$(document).ready(function($) {
+
+document.addEventListener("DOMContentLoaded", () => {
 
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {myFunction()};
@@ -24,17 +24,9 @@ function myFunction() {
 
 
 //Email JS integration
-document.getElementById('contact').addEventListener('submit', function(event) {
-    event.preventDefault();
-   /* emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-      .then(function(response) {
-        console.log('Email sent!', response.status, response.text);
-        alert('Email sent successfully!');
-      }, function(error) {
-        console.error('Error sending email:', error);
-        alert('Oops! Something went wrong.');
-      }); */
-	  emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
+/* document.getElementById('contactSubmit').addEventListener('submit', function(e) {
+    e.preventDefault();
+	  emailjs.sendForm(service_320r477, template_5fmmusv, e.target, Vu_F4zdaki0EEjCXu)
 	  .then((result) => {
 		console.log(result.text);
 		alert('Message Sent Successfully')
@@ -44,11 +36,27 @@ document.getElementById('contact').addEventListener('submit', function(event) {
 	  });
 	e.target.reset();
 
-});
+}); */
+
+const handleOnSubmit = (e) => {
+	console.log("ritu e.target.business: "+e.target.business);
+	//e.preventDefault();
+	//console.clear();
+
+	/* emailjs.sendForm(service_320r477, template_5fmmusv, e.target, Vu_F4zdaki0EEjCXu)
+	  .then((result) => {
+		console.log(result.text);
+		alert('Message Sent Successfully')
+	  }, (error) => {
+		console.log(error.text);
+		alert('Something went wrong!')
+	  });
+	e.target.reset() */
+};
 
 
 // navigation
-var OnePageNav = function() {
+/* var OnePageNav = function() {
 	$(".smoothscroll[href^='#'], #ftco-nav ul li a[href^='#']").on('click', function(e) {
 		e.preventDefault();
 
@@ -70,7 +78,7 @@ var OnePageNav = function() {
 	})
 };
 OnePageNav();
-
+ */
 
 
 });
