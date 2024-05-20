@@ -74,7 +74,7 @@ document.getElementById('contactSubmit').onclick = function(e) {
 	e.preventDefault();
 	//console.clear();
 
-	emailjs.sendForm(service_320r477, template_5fmmusv, e.target)
+	emailjs.sendForm("service_320r477", "template_5fmmusv", e.target, "Vu_F4zdaki0EEjCXu")
 	  .then((result) => {
 		console.log(result.text);
 		alert('Message Sent Successfully')
