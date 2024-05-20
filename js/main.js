@@ -67,7 +67,9 @@ OnePageNav();
 
 });
 
-const handleOnSubmit = (e) => {
+document.getElementById('contactSubmit').onclick = function(e) {
+	console.log("ritu ritu rotu");
+
 	console.log("ritu e.target.business: "+e.target.business);
 	//e.preventDefault();
 	//console.clear();
@@ -82,4 +84,6 @@ const handleOnSubmit = (e) => {
 	  });
 	e.target.reset() */
 };
+
+
 
