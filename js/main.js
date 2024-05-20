@@ -71,10 +71,10 @@ document.getElementById('contactSubmit').onclick = function(e) {
 	console.log("ritu ritu rotu");
 
 	console.log("ritu e.target.business: "+e.target.business);
-	//e.preventDefault();
+	e.preventDefault();
 	//console.clear();
 
-	/* emailjs.sendForm(service_320r477, template_5fmmusv, e.target, Vu_F4zdaki0EEjCXu)
+	emailjs.sendForm(service_320r477, template_5fmmusv, e.target, Vu_F4zdaki0EEjCXu)
 	  .then((result) => {
 		console.log(result.text);
 		alert('Message Sent Successfully')
@@ -82,7 +82,7 @@ document.getElementById('contactSubmit').onclick = function(e) {
 		console.log(error.text);
 		alert('Something went wrong!')
 	  });
-	e.target.reset() */
+	e.target.reset();
 };
 
 
