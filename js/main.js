@@ -28,7 +28,7 @@ function myFunction() {
 document.getElementById('contactSubmit').onclick = function(e) {
 	console.log("ritu ritu rotu: ");
 
-	console.log("ritu e.target.business: "+e.target.business);
+	console.log("ritu process.env.SERVICE_ID: "+process.env.SERVICE_ID);
 	e.preventDefault();
 	//console.clear();
 
