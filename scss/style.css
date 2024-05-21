@@ -369,7 +369,7 @@ body {
   #home .homeContainer {
     width: 94vw;
     height: 94vw;
-    margin-top: var(--m-margin);
+    margin-top: var(--l-margin);
   }
   #home .homeContainer .my-projects-title {
     font-size: 2.5rem;
@@ -389,14 +389,19 @@ body {
     margin-top: 0.5rem;
   }
 }
+@media (min-width: 800px) and (max-width: 1150px) {
+  #home .homeContainer .my-projects-title:nth-child(2) {
+    margin-top: -4rem;
+  }
+}
 @media (min-width: 1200px) {
   #home .homeContainer .my-projects-title:nth-child(2) {
-    margin-top: -8rem;
+    margin-top: -5rem;
   }
 }
 @media (min-width: 1500px) {
   #home .homeContainer .my-projects-title:nth-child(2) {
-    margin-top: -1rem;
+    margin-top: -4rem;
   }
 }
 /*  --------------------------------- End of Home Page ---------------------------------- */
@@ -646,7 +651,7 @@ body {
 
 @media (max-width: 900px) {
   .specialitiesContainerWrapper .specialitiesContainer {
-    margin-top: 2rem;
+    margin-top: 7rem;
   }
   .specialitiesContainerWrapper .specialitiesContainer h2 {
     margin-top: 2rem;
@@ -1532,7 +1537,8 @@ body {
   #contact .contactContainer .contactDetailsContainer {
     margin-bottom: -150px;
   }
-  #contact .contactContainer .contactDetailsContainer h3 {
+  #contact .contactContainer .contactDetailsContainer h2 {
+    text-align: center;
     font-size: var(--sm-font);
   }
   #contact .contactContainer .contactDetailsContainer .description p {
