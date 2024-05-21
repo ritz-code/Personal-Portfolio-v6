@@ -65,6 +65,10 @@ html {
     padding-top: 60px;
 }
 
+.navbar-boxshadow {
+  box-shadow: var(--m-box-shadow);
+}
+
 * {
   margin: 0;
   padding: 0;

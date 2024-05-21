@@ -281,6 +281,7 @@ body {
   align-items: center;
   width: 70vh;
   height: 70vh;
+  margin-top: var(--l-margin);
   background: var(--rainbow-linear-gradient);
   border-radius: 50%;
   background-size: 400%;
@@ -455,7 +456,7 @@ body {
   resize: none;
   margin-bottom: 30px;
 }
-#contactFormContainer .contactWrapper .formWrapper #contact .formSubmit .submitBtn {
+#contactFormContainer .contactWrapper .formWrapper #contact .submitBtn {
   margin-top: var(--xxs-margin);
   padding: 0.75rem;
   font-weight: 600;
@@ -470,7 +471,7 @@ body {
   letter-spacing: 1px;
   box-shadow: var(--box-shadow);
 }
-#contactFormContainer .contactWrapper .formWrapper #contact .formSubmit .submitBtn:hover, #contactFormContainer .contactWrapper .formWrapper #contact .formSubmit .submitBtn:focus {
+#contactFormContainer .contactWrapper .formWrapper #contact .submitBtn:hover, #contactFormContainer .contactWrapper .formWrapper #contact .submitBtn:focus {
   outline: none;
   transform: scale(1.1);
 }
@@ -508,6 +509,7 @@ body {
   background: var(--lt-mint-linear-gradient);
 }
 #contactFormContainer .contactWrapper .footerContainer {
+  bordeR: 2px solid red;
   margin-top: 1rem !important;
   display: flex;
   flex-direction: row;
