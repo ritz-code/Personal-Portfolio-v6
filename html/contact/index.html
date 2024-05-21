@@ -17,31 +17,34 @@
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../scss/style.css">
-
-    <script src="https://cdn.jsdelivr.net/npm/dotenv@16.4.5/lib/main.min.js"></script>
-
     <script type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+
     </script>
     <script type="text/javascript">
         (function(){
             emailjs.init({
-                publicKey: "Vu_F4zdaki0EEjCXu",
+                publicKey: 'Vu_F4zdaki0EEjCXu',
             });
         })();
     </script>
     <script type="text/javascript">
         window.onload = function() {
+            var messageFeedback = document.getElementById('messageFeedback');
+            
             document.getElementById('contact').addEventListener('submit', function(e) {
                 event.preventDefault();
                 // these IDs from the previous steps
                 emailjs.sendForm('service_320r477', 'template_5fmmusv', e.target, this)
                     .then((result) => {
-                        console.log("result: "+result.text);
-
                         console.log('SUCCESS!');
+                        
+                        messageFeedback.classList.add("messageDisplaySuccess");
+                        messageFeedback.innerHTML = "Thanks for reaching out. We will be in touch with you shortly.";
                     }, (error) => {
                         console.log('FAILED...', error);
+                        messageFeedback.classList.add("messageDisplayFailure");
+                        messageFeedback.innerHTML = "Please try to send the details again.";
                     });
                 e.target.reset();
             });
@@ -70,7 +73,7 @@
         </div -->	
         <nav class="navbar navbar-expand-lg" id="ftco-navbar">
             <div class="container">
-              <a class="navbar-brand" href="../../index.html/"><img width="180" src="../../assets/image/brand.png"/></a>
+              <a class="navbar-brand" href="../../"><img width="180" src="../../assets/image/brand.png"/></a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="hamburger">
 
@@ -96,7 +99,7 @@
       
               <div class="collapse navbar-collapse menuListWrapper" id="ftco-nav">
                 <ul class="navbar-nav ml-auto menuList">
-                    <li class="nav-item active"><a href="../../" class="nav-link">Home</a></li>
+                    <li class="nav-item active"><a href="../../" class="nav-link">Back to Home Page</a></li>
                 </ul>
               </div>
             </div>
@@ -120,6 +123,7 @@
                 <button name="submit" type="submit" id="submit" class="button submitBtn" data-submit="...Sending">Submit</button>
                 
             </form>
+            <p id="messageFeedback"></p>
         </div>
         <div class="contactImageWrapper">
             <img class="contactImage" width="450" height="300" src="../../assets/svg/monitor.svg" alt="computer monitor" />
@@ -134,6 +138,11 @@
         </div>
 
     </div>
+        <!-- Start of Footer bottom -->
+        <div class="footerContainer sectionWrapper">
+            <p>Dunwoody Web Designs| Copyright © 2024| All Rights Reserved.</p>
+        </div>
+        <!-- End of Footer bottom -->
 </section>
 <!-- End of Contact Section -->
 

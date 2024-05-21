@@ -20,24 +20,4 @@ function myFunction() {
 }
 });
 
-//EmailJS Integration
-/*document.getElementById('contactSubmit').onclick = function(e) {
-	console.log("ritu ritu rotu: ");
-
-	console.log("ritu process.env.SERVICE_ID: "+SERVICE_ID);
-	e.preventDefault();
-	//console.clear();
-
-	// emailjs.sendForm(process.env.SERVICE_ID, process.env.TEMPLATE_ID, e.target, process.env.PUBLIC_KEY)
-	emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY).then((result) => {
-		console.log(result.text);
-		alert('Message Sent Successfully')
-	  }, (error) => {
-		console.log(error.text);
-		alert('Something went wrong!')
-	  });
-	e.target.reset();
-};  */
-
-
 

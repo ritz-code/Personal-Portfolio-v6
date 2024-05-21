@@ -245,6 +245,10 @@ body {
   transform: scaleX(0);
   transition: transform 0.3s ease-in-out;
 }
+.default-header #ftco-navbar .menuListWrapper .menuList a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
 .default-header #ftco-navbar .menuListWrapper .menuList .contactBtn {
   padding: 0 0.3rem !important;
   background: var(--lt-mint-linear-gradient);
@@ -415,6 +419,7 @@ body {
   top: 0;
 }
 #contactFormContainer .contactWrapper .formWrapper {
+  margin-top: 7.5rem;
   position: relative;
   width: 500px !important;
   box-shadow: var(--card-shadow-s);
@@ -480,7 +485,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
+  margin-bottom: 2rem;
 }
 #contactFormContainer .contactWrapper .contactImageWrapper img {
   margin-bottom: 20px;
@@ -501,15 +506,16 @@ body {
 #contactFormContainer .contactWrapper .contactImageWrapper:after {
   content: "";
   position: absolute;
-  top: 0;
+  top: 5rem;
   left: 85%;
   width: 1.5rem;
   height: 1.5rem;
   border-radius: var(--blob-border-radius);
   background: var(--lt-mint-linear-gradient);
 }
-#contactFormContainer .contactWrapper .footerContainer {
-  bordeR: 2px solid red;
+#contactFormContainer .footerContainer {
+  position: fixed;
+  bottom: 0;
   margin-top: 1rem !important;
   display: flex;
   flex-direction: row;
@@ -517,7 +523,7 @@ body {
   align-items: center;
   width: 100%;
 }
-#contactFormContainer .contactWrapper .footerContainer p {
+#contactFormContainer .footerContainer p {
   padding: 1px;
   display: block;
   font-size: 0.7rem !important;
@@ -551,10 +557,10 @@ body {
   #contactFormContainer .contactWrapper .contactImageWrapper .borderGroup h3 {
     margin-bottom: 0rem;
   }
-  #contactFormContainer .contactWrapper .footerContainer {
+  #contactFormContainer .footerContainer {
     margin-top: 1rem;
   }
-  #contactFormContainer .contactWrapper .footerContainer p {
+  #contactFormContainer .footerContainer p {
     font-size: 0.4rem !important;
   }
 }
@@ -632,6 +638,10 @@ body {
 }
 .specialitiesContainerWrapper .specialitiesContainer .specContainer .specCard .circle:hover, .specialitiesContainerWrapper .specialitiesContainer .specContainer .specCard .circle:focus {
   scale: 1.1;
+}
+.specialitiesContainerWrapper .specialitiesContainer .specContainer .specCard:hover, .specialitiesContainerWrapper .specialitiesContainer .specContainer .specCard:focus {
+  scale: 1.1;
+  background: var(--lt-mint-green);
 }
 
 @media (max-width: 900px) {
@@ -1189,6 +1199,7 @@ body {
   box-shadow: var(--card-shadow-s);
   background-color: var(--card-bg);
   width: 32%;
+  max-width: 400px;
   min-height: 200px;
   box-shadow: var(--card-shadow-dark);
   margin: var(--m-margin) 0;
@@ -1227,8 +1238,8 @@ body {
   position: absolute;
   top: 14px;
   left: -10px;
-  width: 0.25rem;
-  height: 0.25rem;
+  width: 0.3rem;
+  height: 0.3rem;
   border-radius: var(--blob-border-radius);
   background: var(--mint-green);
 }
@@ -1248,21 +1259,27 @@ body {
   border: transparent;
   cursor: pointer;
   letter-spacing: 2px;
-  color: var(--lt-color-heading);
   background: var(--lt-mint-linear-gradient);
   border-radius: var(--s-border-radius);
   letter-spacing: var(--letter-spacing);
   box-shadow: var(--box-shadow);
 }
+#paymentPlan .paymentContainerWrapper .paymentContainer .planCard .endContainer .btnContainer .planBtn a {
+  color: var(--lt-color-heading);
+}
+#paymentPlan .paymentContainerWrapper .paymentContainer .planCard .endContainer .btnContainer .planBtn:hover {
+  outline: none;
+}
 #paymentPlan .paymentContainerWrapper .paymentContainer .planCard .endContainer:hover, #paymentPlan .paymentContainerWrapper .paymentContainer .planCard .endContainer:focus {
+  scale: 0.95;
   background: var(--lt-mint-linear-gradient);
   color: #fff !important;
   border-radius: var(--m-border-radius);
   transition: all 0.5s ease-in-out;
 }
 #paymentPlan .paymentContainerWrapper .paymentContainer .planCard .endContainer:hover .btnContainer .planBtn, #paymentPlan .paymentContainerWrapper .paymentContainer .planCard .endContainer:focus .btnContainer .planBtn {
-  scale: 1.05;
   background: var(--background-color);
+  border: 1px solid white;
 }
 
 @media (max-width: 760px) {

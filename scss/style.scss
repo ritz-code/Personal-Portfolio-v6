@@ -60,7 +60,10 @@
                         transform: scaleX(0);
                         transition: transform 0.3s ease-in-out;
                       }
-
+                      a:hover::before {
+                        transform-origin: left;
+                        transform: scaleX(1);
+                      }
                       .contactBtn {
                         padding: 0 0.3rem!important;
                         background: var(--lt-mint-linear-gradient);
@@ -251,6 +254,7 @@ background-image: url("../assets/svg/floating-cogs.svg"); */
         position: absolute;
         top: 0;
         .formWrapper {
+          margin-top: 7.5rem;
            position: relative;
            width: 500px !important;
            box-shadow: var(--card-shadow-s);
@@ -260,7 +264,6 @@ background-image: url("../assets/svg/floating-cogs.svg"); */
            padding: var(--p-padding);
             #contact {
                 @include flexprop(column, center, center);
-                
                 h3 {
                     font-weight: 800;
                     letter-spacing: 1px;
@@ -312,12 +315,11 @@ background-image: url("../assets/svg/floating-cogs.svg"); */
                     }
                 }
             }
-            
+          
         }
         .contactImageWrapper {
             @include flexprop(column, center, center);
-            position: relative;
-
+            margin-bottom: 2rem;
             img {
                 margin-bottom: 20px;
                 // display: none;
@@ -340,7 +342,7 @@ background-image: url("../assets/svg/floating-cogs.svg"); */
             &:after {
                 content: "";
                 position: absolute;
-                top: 0;
+                top: 5rem;
                 left: 85%;
                 width: 1.5rem;
                 height: 1.5rem;
@@ -348,19 +350,20 @@ background-image: url("../assets/svg/floating-cogs.svg"); */
                 background: var(--lt-mint-linear-gradient);
             }
         }
+    }
 
-        .footerContainer {
-          bordeR: 2px solid red;
-          margin-top: 1rem!important;
-          @include flexprop(row, center, center);
-          width: 100%;
-            p {
-              padding: 1px;
-              display: block;
-              font-size: 0.7rem!important;
-              line-height: 0.8rem;
-              z-index: 5000!important;
-            }
+    .footerContainer {
+      position: fixed;
+      bottom: 0;
+      margin-top: 1rem!important;
+      @include flexprop(row, center, center);
+      width: 100%;
+        p {
+          padding: 1px;
+          display: block;
+          font-size: 0.7rem!important;
+          line-height: 0.8rem;
+          z-index: 5000!important;
         }
     }
 }
@@ -389,14 +392,13 @@ background-image: url("../assets/svg/floating-cogs.svg"); */
                 }
             }
         }
-        //ritu
-        .footerContainer {
-          margin-top: 1rem;
-          p {
-            font-size: 0.4rem!important;
-          }
-        } 
-    } 
+      } 
+      .footerContainer {
+        margin-top: 1rem;
+        p {
+          font-size: 0.4rem!important;
+        }
+      } 
     }
 }
 
@@ -463,6 +465,11 @@ background-image: url("../assets/svg/floating-cogs.svg"); */
                       scale: 1.1;
                   }
               }
+            &:hover,
+            &:focus {
+              scale: 1.1;
+              background: var(--lt-mint-green);
+            }
           }
       }
   }
@@ -1011,6 +1018,7 @@ margin-top: 10rem;
               box-shadow: var(--card-shadow-s);
               background-color: var(--card-bg);
               width: 32%;
+              max-width: 400px;
               min-height: 200px;
               box-shadow: var(--card-shadow-dark);
               margin: var(--m-margin) 0;
@@ -1045,8 +1053,8 @@ margin-top: 10rem;
                           position: absolute;
                           top: 14px;
                           left: -10px;
-                          width: 0.25rem;
-                          height: 0.25rem;
+                          width: 0.3rem;
+                          height: 0.3rem;
                           border-radius: var(--blob-border-radius);
                           background: var(--mint-green);
                       }
@@ -1064,21 +1072,28 @@ margin-top: 10rem;
                           border: transparent;
                           cursor: pointer;
                           letter-spacing: 2px;
-                          color: var(--lt-color-heading);
                           background: var(--lt-mint-linear-gradient);
                           border-radius: var(--s-border-radius);
                           letter-spacing: var(--letter-spacing);
                           box-shadow: var(--box-shadow);
+                          a {
+                            color: var(--lt-color-heading);
+                          }
+                          &:hover {
+                            outline: none;
+                          }
                       }
                   }
                   &:hover, &:focus{
+                    scale: .95;
                       background: var(--lt-mint-linear-gradient);
                       color: #fff!important;
                       border-radius: var(--m-border-radius);
                       transition: all 0.5s ease-in-out;
                       .btnContainer .planBtn {
-                          scale: 1.05;
                           background: var(--background-color);
+                         // box-shadow: var(--dark-box-shadow);
+                         border: 1px solid white;
                       }
                   }
               }
