@@ -184,7 +184,7 @@ body {
 }
 
 .default-header {
-  bordeR: 2px solid red;
+  bordeR: 2px solid green;
   max-width: 100%;
 }
 .default-header .navbar-toggler {
