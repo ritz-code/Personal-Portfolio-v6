@@ -183,6 +183,10 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.default-header {
+  bordeR: 2px solid red;
+  max-width: 100%;
+}
 .default-header .navbar-toggler {
   color: var(--lt-color-heading);
   font-size: var(--s-font) !important;

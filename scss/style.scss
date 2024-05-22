@@ -2,6 +2,9 @@
 
 
 .default-header {
+  bordeR: 2px solid red;
+  max-width: 100%;
+  
     .navbar-toggler {
       color: var(--lt-color-heading);
       font-size: var(--s-font) !important;
