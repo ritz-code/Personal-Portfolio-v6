@@ -68,7 +68,8 @@
                       }
                       .contactBtn {
                         padding: 0 0.3rem!important;
-                        background: var(--lt-mint-linear-gradient);
+                       // background: var(--lt-mint-linear-gradient);
+                       background: var(--mint-green);
                         border-radius: var(--s-border-radius);
                         letter-spacing: var(--letter-spacing);
                         box-shadow: var(--box-shadow);
@@ -98,9 +99,9 @@
     } */
     background: linear-gradient(
       to left,
-      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.3),
       rgba(0, 0, 0, 0.3)
-    ), url(../assets/image/background.jpg) center;
+    ), url(../assets/image/background.jpg) center ;
     // cogs
    /*  background-color: #e8e3da;
 background-image: url("../assets/svg/floating-cogs.svg"); */
@@ -111,7 +112,7 @@ background-image: url("../assets/svg/floating-cogs.svg"); */
       width: 70vh;
       height: 70vh;
       margin-top: var(--l-margin);
-     background: var(--sm-rainbow-linear-gradient);
+     background: var(--m-rainbow-linear-gradient);
       border-radius: 50%;
       background-size: 400%;
       animation: bg-animation 5s infinite alternate;

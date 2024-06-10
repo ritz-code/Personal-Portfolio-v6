@@ -28,8 +28,8 @@
   );
   --m-rainbow-linear-gradient: linear-gradient(
     80deg,
-    rgba(252, 196, 25, 0.3),
-    rgba(247, 103, 7, 0.4) 70%
+    rgba(252, 196, 25, 0.1),
+    rgba(247, 103, 7, 0.2) 70%
   );
   --lt-orange-linear-gradient: linear-gradient(
     80deg,
@@ -253,7 +253,7 @@ body {
 }
 .default-header #ftco-navbar .menuListWrapper .menuList .contactBtn {
   padding: 0 0.3rem !important;
-  background: var(--lt-mint-linear-gradient);
+  background: var(--mint-green);
   border-radius: var(--s-border-radius);
   letter-spacing: var(--letter-spacing);
   box-shadow: var(--box-shadow);
@@ -277,7 +277,7 @@ body {
        background-position: center;
       // animation: rotation 10s infinite linear;
    } */
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(../assets/image/background.jpg) center;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../assets/image/background.jpg) center;
   /*  background-color: #e8e3da;
   background-image: url("../assets/svg/floating-cogs.svg"); */
 }
@@ -289,7 +289,7 @@ body {
   width: 70vh;
   height: 70vh;
   margin-top: var(--l-margin);
-  background: var(--sm-rainbow-linear-gradient);
+  background: var(--m-rainbow-linear-gradient);
   border-radius: 50%;
   background-size: 400%;
   animation: bg-animation 5s infinite alternate;
