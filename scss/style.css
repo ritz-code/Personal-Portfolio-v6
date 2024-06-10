@@ -216,7 +216,6 @@ body {
 .default-header #ftco-navbar {
   z-index: 10000;
   padding: 0;
-  background: var(--background-color) !important;
 }
 .default-header #ftco-navbar .menuListWrapper .menuList {
   padding-top: 10px;
@@ -278,6 +277,7 @@ body {
        background-position: center;
       // animation: rotation 10s infinite linear;
    } */
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(../assets/image/background.jpg) center;
   /*  background-color: #e8e3da;
   background-image: url("../assets/svg/floating-cogs.svg"); */
 }
@@ -289,7 +289,7 @@ body {
   width: 70vh;
   height: 70vh;
   margin-top: var(--l-margin);
-  background: var(--rainbow-linear-gradient);
+  background: var(--sm-rainbow-linear-gradient);
   border-radius: 50%;
   background-size: 400%;
   animation: bg-animation 5s infinite alternate;
@@ -303,8 +303,8 @@ body {
   margin-top: -4rem;
 }
 #home .homeContainer .my-projects-title text {
-  fill: var(--title-lt-heading);
-  stroke: #1d1d1f;
+  fill: var(--background-color);
+  stroke: var(--color-heading);
   fill-opacity: 1;
   stroke-width: 0;
   font-weight: 700;
@@ -319,6 +319,7 @@ body {
   width: 100vw !important;
   font-size: 0.9rem !important;
   text-align: center;
+  color: var(--background-color);
 }
 #home .homeContainer a {
   text-decoration: none !important;
@@ -332,7 +333,7 @@ body {
   cursor: pointer;
   border: transparent;
   letter-spacing: var(--letter-spacing);
-  background: var(--lt-mint-linear-gradient);
+  background: var(--mint-green);
   border-radius: 25px;
 }
 #home .homeContainer .actionBtn:hover, #home .homeContainer .actionBtn:focus {
